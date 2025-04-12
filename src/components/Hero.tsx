@@ -14,9 +14,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               
-              <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-2">
-                Learn More
-              </Button>
+              
             </div>
             
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
