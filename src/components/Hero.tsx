@@ -1,11 +1,8 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Shield, HeadphonesIcon } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="pt-28 pb-16 hero-gradient">
+  return <section className="pt-28 pb-16 hero-gradient">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
@@ -16,9 +13,7 @@ const Hero = () => {
               A safe, supportive space to nurture your mental wellbeing with professional guidance, community support, and personalized resources.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg">
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              
               <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-2">
                 Learn More
               </Button>
@@ -48,11 +43,7 @@ const Hero = () => {
           
           <div className="lg:w-1/2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border animate-float">
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                alt="Person using mental health support system"
-                className="w-full h-auto"
-              />
+              <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Person using mental health support system" className="w-full h-auto" />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/90 to-transparent p-6">
                 <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg max-w-xs">
                   <p className="text-sm font-medium">
@@ -70,8 +61,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
