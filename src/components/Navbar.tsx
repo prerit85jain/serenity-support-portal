@@ -1,21 +1,15 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <header className="fixed w-full bg-background/90 backdrop-blur-sm z-50 border-b">
+  return <header className="fixed w-full bg-background/90 backdrop-blur-sm z-50 border-b">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Serenity
-              </span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Jai shree Krishna</span>
             </Link>
           </div>
           
@@ -37,10 +31,7 @@ const Navbar = () => {
           </div>
           
           <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none"
-            >
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -48,35 +39,18 @@ const Navbar = () => {
       </div>
       
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-background border-b">
+      {isMenuOpen && <div className="md:hidden bg-background border-b">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a 
-              href="#features" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <a href="#features" className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Features
             </a>
-            <a 
-              href="#how-it-works" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <a href="#how-it-works" className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               How It Works
             </a>
-            <a 
-              href="#testimonials" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <a href="#testimonials" className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Testimonials
             </a>
-            <a 
-              href="#faq" 
-              className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
+            <a href="#faq" className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </a>
             <div className="mt-4 px-3">
@@ -87,10 +61,7 @@ const Navbar = () => {
               </Button>
             </div>
           </div>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 };
-
 export default Navbar;
