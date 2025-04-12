@@ -21,7 +21,7 @@ const GetStartedDialog = ({ trigger }: GetStartedDialogProps) => {
   const handleSubmit = (data: any) => {
     console.log("Form data:", data);
     setOpen(false);
-    window.open("https://bkins-wisdomweaver.streamlit.app/", "_blank");
+    window.location.href = "https://bkins-wisdomweaver.streamlit.app/";
   };
 
   return (
