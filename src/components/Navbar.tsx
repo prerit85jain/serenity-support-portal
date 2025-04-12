@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,11 +12,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Serenity
               </span>
-            </a>
+            </Link>
           </div>
           
           <div className="hidden md:block">
@@ -28,8 +29,10 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
-              Get Started
+            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6" asChild>
+              <Link to="/get-started">
+                Get Started
+              </Link>
             </Button>
           </div>
           
@@ -77,8 +80,10 @@ const Navbar = () => {
               FAQ
             </a>
             <div className="mt-4 px-3">
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full">
-                Get Started
+              <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full" asChild>
+                <Link to="/get-started" onClick={() => setIsMenuOpen(false)}>
+                  Get Started
+                </Link>
               </Button>
             </div>
           </div>

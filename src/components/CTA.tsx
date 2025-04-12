@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -19,8 +20,10 @@ const CTA = () => {
               Join thousands who have found support, community, and resources to improve their mental wellbeing. Your journey towards better mental health starts here.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg">
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg" asChild>
+                <Link to="/get-started">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button variant="outline" className="rounded-full px-8 py-6 text-lg border-2">
                 Learn More
