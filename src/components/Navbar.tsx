@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import GetStartedDialog from "./GetStartedDialog";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return <header className="fixed w-full bg-background/90 backdrop-blur-sm z-50 border-b">
@@ -24,9 +26,13 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6" onClick={() => window.open("https://bkins-wisdomweaver.streamlit.app/", "_blank")}>
-              Get Started
-            </Button>
+            <GetStartedDialog 
+              trigger={
+                <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+                  Get Started
+                </Button>
+              }
+            />
           </div>
           
           <div className="md:hidden">
@@ -53,15 +59,16 @@ const Navbar = () => {
               FAQ
             </a>
             <div className="mt-4 px-3">
-              <Button 
-                className="w-full bg-primary hover:bg-primary/90 text-white rounded-full" 
-                onClick={() => {
-                  window.open("https://bkins-wisdomweaver.streamlit.app/", "_blank");
-                  setIsMenuOpen(false);
-                }}
-              >
-                Get Started
-              </Button>
+              <GetStartedDialog 
+                trigger={
+                  <Button 
+                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-full"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Get Started
+                  </Button>
+                }
+              />
             </div>
           </div>
         </div>}
