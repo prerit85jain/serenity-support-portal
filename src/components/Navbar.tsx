@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -12,7 +11,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Jai shree Krishna</span>
+              <span className="text-2xl font-bold text-violet-600 dark:text-violet-400">Jai Shree Krishna</span>
             </Link>
           </div>
           
@@ -28,7 +27,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <GetStartedDialog 
               trigger={
-                <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+                <Button className="bg-violet-600 hover:bg-violet-700 text-white rounded-full px-6">
                   Get Started
                 </Button>
               }
@@ -62,7 +61,7 @@ const Navbar = () => {
               <GetStartedDialog 
                 trigger={
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-full"
+                    className="w-full bg-violet-600 hover:bg-violet-700 text-white rounded-full"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Get Started

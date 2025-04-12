@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -104,7 +103,7 @@ const GetStartedForm = ({ onSubmit }: GetStartedFormProps) => {
           )}
         />
         
-        <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white rounded-full py-6 text-lg">
+        <Button type="submit" className="w-full bg-violet-600 hover:bg-violet-700 text-white rounded-full py-6 text-lg">
           Submit <ArrowRight className="ml-2 h-5 w-5" />
         </Button>
       </form>
