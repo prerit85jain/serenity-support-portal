@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -23,10 +24,8 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6" asChild>
-              <Link to="/get-started">
-                Get Started
-              </Link>
+            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6" onClick={() => window.open("https://bkins-wisdomweaver.streamlit.app/", "_blank")}>
+              Get Started
             </Button>
           </div>
           
@@ -54,10 +53,14 @@ const Navbar = () => {
               FAQ
             </a>
             <div className="mt-4 px-3">
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full" asChild>
-                <Link to="/get-started" onClick={() => setIsMenuOpen(false)}>
-                  Get Started
-                </Link>
+              <Button 
+                className="w-full bg-primary hover:bg-primary/90 text-white rounded-full" 
+                onClick={() => {
+                  window.open("https://bkins-wisdomweaver.streamlit.app/", "_blank");
+                  setIsMenuOpen(false);
+                }}
+              >
+                Get Started
               </Button>
             </div>
           </div>
